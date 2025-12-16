@@ -17,7 +17,9 @@ const SubFeatureCard: React.FC<SubFeatureCardProps> = ({
   const location = useLocation()
 
   const handleClick = () => {
-    // Convert "Sub Feature 1" to "sub-feature-1"
+    // Convert title to URL-friendly format
+    // "Goals Dashboard" → "goals-dashboard"
+    // "Card Collection" → "card-collection"
     const subFeatureId = title.toLowerCase().replace(/\s+/g, '-')
     
     // Get current feature (feature1 or feature2)

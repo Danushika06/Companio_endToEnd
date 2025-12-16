@@ -43,14 +43,14 @@ const Feature2Page: React.FC = () => {
     },
     {
       id: 7,
-      title: 'Sub Feature 7',
-      description: 'Track performance gauges and system health indicators.',
+      title: 'Goals Dashboard',
+      description: 'Track your progress with compassionate visualizations and insights.',
       icon: <Gauge size={24} />,
     },
     {
       id: 8,
-      title: 'Sub Feature 8',
-      description: 'Fine-tune system preferences and advanced configurations.',
+      title: 'Card Collection',
+      description: 'Collect and trade Pokémon cards in a gamified marketplace.',
       icon: <Settings size={24} />,
     },
   ]
