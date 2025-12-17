@@ -12,12 +12,6 @@ interface SidebarProps {
 const Sidebar: React.FC<SidebarProps> = ({ currentPath, isOpen }) => {
   const navigationItems = [
     {
-      id: 'feature1',
-      label: 'Feature 1',
-      path: '/feature1',
-      icon: Grid2X2,
-    },
-    {
       id: 'feature2',
       label: 'Feature 2',
       path: '/feature2',
