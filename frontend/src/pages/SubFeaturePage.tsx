@@ -1,6 +1,8 @@
 import React from 'react'
 import { useParams, useNavigate, useLocation } from 'react-router-dom'
 import { ArrowLeft } from 'lucide-react'
+import GoalsManagement from '../components/GoalsManagement.tsx'
+import TaskBreakdown from '../components/TaskBreakdown.tsx'
 import './SubFeaturePage.css'
 
 const SubFeaturePage: React.FC = () => {
@@ -47,10 +49,17 @@ const SubFeaturePage: React.FC = () => {
         </div>
 
         <div className="sub-feature-body">
-          <div className="placeholder-message">
-            <h2>Update the {subFeatureTitle} work here</h2>
-            <p>This is where you can add specific functionality for {subFeatureTitle}.</p>
-          </div>
+          {/* Feature 2 - Goal Creation & Planning */}
+          {featureId === 'feature2' && (subFeatureId === 'sub-feature-1' || subFeatureId === 'goal-creation-&-planning') ? (
+            <GoalsManagement />
+          ) : featureId === 'feature2' && (subFeatureId === 'sub-feature-2' || subFeatureId === 'intelligent-task-breakdown' || subFeatureId === 'intelligent-task-breakdown-&-customization') ? (
+            <TaskBreakdown />
+          ) : (
+            <div className="placeholder-message">
+              <h2>Update the {subFeatureTitle} work here</h2>
+              <p>This is where you can add specific functionality for {subFeatureTitle}.</p>
+            </div>
+          )}
         </div>
       </div>
     </div>
